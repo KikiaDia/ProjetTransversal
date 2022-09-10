@@ -1,0 +1,24 @@
+#faki{
+    margin: auto;
+    
+    width: 50%;
+}
+#option{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+#ajout{
+    margin-top: 2rem;
+    margin-left: 17rem;
+}
+.option_input{
+    width: 15rem;
+}
+.love{
+    width: 24rem;
+}
+.remove{
+    margin-top: 1rem;
+}

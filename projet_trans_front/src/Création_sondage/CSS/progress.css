@@ -1,0 +1,139 @@
+/*:root{
+    --line-border-fill: #9c27b0;
+    --line-border-empty: #bdbdbd;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    font-family: "Mulish", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.fa-html5 {
+    font-size: 1.8rem;
+    color: #ff5773;
+}
+.fa-css3-alt{
+    font-size: 1.8rem;
+    color: #264de4;
+}
+.fa-js{
+    font-size: 1.6rem;
+    color: #f7e018;
+}
+.fa-react{
+    font-size: 1.8rem;
+    color: #61dbfb;
+}
+.container{
+    text-align: center;
+    height: 30px;
+    background-color: #CCC;
+    position: relative;
+}
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+    
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height:4px;
+    width: 0%;
+    z-index: -1; 
+    transition: 0.4s ease;
+}
+.progress-container::before{
+    content: "";
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height:4px;
+    width: 100%;
+    z-index: -1; 
+    transition: 0.4s ease;
+}*/
+/*.circle{
+    background-color: #fff;
+    color: #999 ;
+    border-radius: 15px;
+    height: 40px;
+    width: 8rem;
+    border: 3px solid #b2bec3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+.circle.active{
+     border-color: var(--line-border-fill);
+}
+.btn{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.97);
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}*/
+.container{
+    height: 25px;
+    background-color: #CCC;
+    position: relative;
+    
+}
+.container #progress-container{
+    position: absolute;
+    height: 100%;
+    background-color: rgb(125, 44, 255);
+    
+}
+#progress-container{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+}
+.container .dfg{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    
+    
+}
+p{
+    width: 50%;
+   
+}
