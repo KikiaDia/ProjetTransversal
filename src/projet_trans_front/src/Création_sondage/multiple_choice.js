@@ -1,7 +1,7 @@
 /*import './Inscription.css';*/
 import { zone_texte1, ajouter_zone} from './zone_texte';
 import {checkbox} from './checkbox';
-import {required1} from './details';
+import {required1} from './required';
 import $ from 'jquery';
 
 
@@ -108,7 +108,7 @@ import $ from 'jquery';
         test.appendChild(question);
         question.appendChild(input);
         question.appendChild(button);
-        const ajout_zone = document.getElementById('ajout_zone');
+        const ajout_zone = document.getElementById('ajout_multiple');
         ajout_zone.removeAttribute("onclick");
         ajout_zone.onclick = ajouter_zone;
 
@@ -177,8 +177,9 @@ import $ from 'jquery';
        option_reponse1.className = 'option_input';
        button_plus.innerHTML = "Plus d'option";
        button_plus.onclick = plus;
+       button_plus.id = 'plus_option';
        button_ajouter.innerHTML = "Ajouter";
-       button_ajouter.id = "ajout_zone";
+       button_ajouter.id = "ajout_multiple";
        button_ajouter.onclick = ajouter_multiple;
  
  

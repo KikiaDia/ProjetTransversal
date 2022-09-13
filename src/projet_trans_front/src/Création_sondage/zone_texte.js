@@ -1,6 +1,6 @@
 import {multiple_choice} from './multiple_choice';
 import {checkbox} from './checkbox';
-import {required1} from './details';
+import {required1} from './required';
 
 
 
@@ -140,6 +140,7 @@ import {required1} from './details';
             
         
         }
+        
         
        
        /**/

@@ -145,4 +145,87 @@ class TestModelTheme(TestCase):
 #         self.assertEqual(str(enquete),'2006-10-25')
 
 
+#Test pour les 6 premiers modèles
+
+class TestUser(TestCase):
+    def setUp(self):
+        self.user = User.objects.create(
+            username = "Fatou01",
+            last_name = "Sall",
+            first_name = "Fatou",
+            password = "1234",
+            domaine = "Education"
+        )
+    def test_str(self):
+        """ Test the__str__ method """
+        expected = "Fatou Sall"
+        actual = str(self.user)
+
+        self.assertEqual(expected, actual)
+
+class TestSondage(TestCase):
+    def setUp(self):
+        user = TestUser()
+        user1 = user.setUp() 
+        self.sondage = sondage.objects.create(
+            fk_user = user1,
+            titre_sondage = "Projet 1",
+            url_sondage = 'www.google.sn'
+        )
+    def test_str(self):
+        """ Test the__str__ method """
+        expected = "Projet 1"
+        actual = str(self.sondage)
+
+        self.assertEqual(expected, actual)
+
+class TestPage(TestCase):
+    def setUp(self):
+        sondage = TestSondage()
+        sondage1 = sondage.setUp() 
+        self.page = Page.objects.create(
+            fk_sondage1 = sondage1,
+            numero_page = "1",
+            
+        )
+    def test_str(self):
+        """ Test the__str__ method """
+        expected = "1"
+        actual = str(self.page)
+
+        self.assertEqual(expected, actual)
+
+class TestQuestion(TestCase):
+    def setUp(self):
+        page = TestPage()
+        page1 = page.setUp() 
+        self.question = Question.objects.create(
+           fk_page = page1,
+           intitule_question = "Quelle est votre couleur ?",
+           obligatoire = True,
+           nom_type = "Multiple_choice"
+            
+        )
+    def test_str(self):
+        """ Test the__str__ method """
+        expected = "Quelle est votre couleur ?"
+        actual = str(self.question)
+
+        self.assertEqual(expected, actual)
+
+class TestOption_Reponse(TestCase):
+    def setUp(self):
+        question = TestQuestion()
+        question1 = question.setUp() 
+        self.option_reponse = Option_reponse.objects.create(
+           fk_question = question1,
+           intitule_option = "A"
+            
+        )
+    def test_str(self):
+        """ Test the__str__ method """
+        expected = "A"
+        actual = str(self.option_reponse)
+
+        self.assertEqual(expected, actual)
 

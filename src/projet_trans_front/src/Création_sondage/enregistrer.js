@@ -1,6 +1,6 @@
 import {choice_option} from './multiple_choice';
 import axios from 'axios';
-import {liste} from './details';
+import {liste} from './required';
 
 
 
